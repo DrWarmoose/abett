@@ -1,0 +1,25 @@
+{
+  "name": "abett",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "docker build -t abett . | docker tag abett:latest warmoose/abett:latest | docker push warmoose/abett:latest"
+  },
+  "keywords": [],
+  "author": "AWG",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1614.0",
+    "axios": "^1.6.8",
+    "csv-parser": "^3.0.0",
+    "dotenv": "^16.4.5",
+    "knex": "^3.1.0",
+    "mongodb": "^6.6.1",
+    "mssql": "^10.0.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.9.7"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "nodejs",
+      "image": "warmoose/abett:latest",
+      "essential": true,
+      "memory": 128,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 8080
+        }
+      ]
+    },
+    {
+      "name": "mysql",
+      "image": "mysql:latest",
+      "essential": true,
+      "memory": 512,
+      "environment": [
+        {
+          "name": "MYSQL_HOST",
+          "value": "localhost"
+        },
+        {
+          "name": "MYSQL_ROOT_PASSWORD",
+          "value": "rootpassword"
+        },
+        {
+          "name": "MYSQL_DATABASE",
+          "value": "abett"
+        },
+        {
+          "name": "MYSQL_USER",
+          "value": "password"
+        },
+        {
+          "name": "MYSQL_PASSWORD",
+          "value": "password"
+        },
+        {
+          "name": "MYSQL_PORT",
+          "value": "3306"
+        }
+      ]
+    }
+  ]
+}
