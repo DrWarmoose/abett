@@ -3,7 +3,8 @@
 ## KISS version
 index.js simply opens up the file hosted on the AWS endpoint and retrieves the rows of data in a streaming manner.  This allows the file to be of any reasonable size without memory buffering concerns.  
 
-As the rows are being pulled in, they are converted in situ and written row by row to the destination database, which in this case is MS SQL.
+As the rows are being pulled in, they are converted in situ and written row by row to the destination database, which in this case is MySQL.
+This was originally developed against MS-SQL so both databases work with the knex.js ORM
 
 ## Composition version
 Multi.js is the entry way where the inputs and the outputs are abstracted into simple:
